@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransmitSelectPersonViewController" customModule="COD" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="Wg9-6R-7qd" id="KS8-IX-odQ"/>
+                <outlet property="bottomViewBottomConstrains" destination="3dP-0l-dz2" id="aUx-WF-dQL"/>
+                <outlet property="segmentedControl" destination="BYU-WJ-pA4" id="Z7V-57-Bc0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wg9-6R-7qd">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BYU-WJ-pA4">
+                            <rect key="frame" x="97" y="6.5" width="220" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="220" id="KpO-kB-dDP"/>
+                            </constraints>
+                            <segments>
+                                <segment title="聊天"/>
+                                <segment title="联系人"/>
+                            </segments>
+                            <color key="tintColor" red="0.29803921568627451" green="0.60784313725490191" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="segmentAction:" destination="-1" eventType="valueChanged" id="gPS-N6-f6W"/>
+                            </connections>
+                        </segmentedControl>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-Tx-wse">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.5"/>
+                            <color key="backgroundColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="O57-5X-zom"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96999999999999997" green="0.96999999999999997" blue="0.96999999999999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="BYU-WJ-pA4" firstAttribute="centerX" secondItem="Wg9-6R-7qd" secondAttribute="centerX" id="6jG-RH-dfT"/>
+                        <constraint firstAttribute="height" constant="44" id="7JG-mL-VPK"/>
+                        <constraint firstAttribute="trailing" secondItem="yhF-Tx-wse" secondAttribute="trailing" id="7uZ-m2-NxG"/>
+                        <constraint firstItem="yhF-Tx-wse" firstAttribute="leading" secondItem="Wg9-6R-7qd" secondAttribute="leading" id="8t8-Gw-aXi"/>
+                        <constraint firstItem="BYU-WJ-pA4" firstAttribute="centerY" secondItem="Wg9-6R-7qd" secondAttribute="centerY" id="d4d-9l-mVb"/>
+                        <constraint firstItem="yhF-Tx-wse" firstAttribute="top" secondItem="Wg9-6R-7qd" secondAttribute="top" id="ka8-eR-rPa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Wg9-6R-7qd" secondAttribute="bottom" id="3dP-0l-dz2"/>
+                <constraint firstAttribute="trailing" secondItem="Wg9-6R-7qd" secondAttribute="trailing" id="9cb-NT-cOS"/>
+                <constraint firstItem="Wg9-6R-7qd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kor-Oc-HNV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="114"/>
+        </view>
+    </objects>
+</document>

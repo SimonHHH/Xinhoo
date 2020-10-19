@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "服务器设置"; ObjectID = "OM6-0c-PhJ"; */
+"OM6-0c-PhJ.text" = "Server setup";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "ve6-Gd-3zt"; */
+"ve6-Gd-3zt.normalTitle" = "Save";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "yK3-y2-YPT"; */
+"yK3-y2-YPT.normalTitle" = "Cancel";

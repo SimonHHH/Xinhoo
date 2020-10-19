@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CODGotoBottomView" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="44" height="55"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlt-BC-OHM">
+                    <rect key="frame" x="0.0" y="11" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="wLd-fP-y4f"/>
+                    </constraints>
+                    <state key="normal" image="icon_gotoBottom_icon"/>
+                    <connections>
+                        <action selector="clickAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="2DI-2o-IUr"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moF-hj-PUS">
+                    <rect key="frame" x="11" y="3" width="22" height="22"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHc-ZR-HFa">
+                            <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="KWx-55-zH8"/>
+                        <constraint firstAttribute="trailing" secondItem="wHc-ZR-HFa" secondAttribute="trailing" id="fRK-mi-qde"/>
+                        <constraint firstItem="wHc-ZR-HFa" firstAttribute="top" secondItem="moF-hj-PUS" secondAttribute="top" id="gDt-ev-sXo"/>
+                        <constraint firstAttribute="height" constant="22" id="geK-uo-hnY"/>
+                        <constraint firstAttribute="bottom" secondItem="wHc-ZR-HFa" secondAttribute="bottom" id="pQL-Fp-ame"/>
+                        <constraint firstItem="wHc-ZR-HFa" firstAttribute="leading" secondItem="moF-hj-PUS" secondAttribute="leading" id="uds-3z-T92"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="11"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jlt-BC-OHM" secondAttribute="bottom" id="Fkj-cj-PES"/>
+                <constraint firstItem="moF-hj-PUS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="Rol-AJ-nJN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jlt-BC-OHM" secondAttribute="trailing" id="X6H-eS-YGL"/>
+                <constraint firstItem="jlt-BC-OHM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bKL-nc-Cvo"/>
+                <constraint firstItem="moF-hj-PUS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="td5-ls-5xK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btn" destination="jlt-BC-OHM" id="mOC-nX-m1W"/>
+                <outlet property="countLab" destination="wHc-ZR-HFa" id="fXC-kH-jXJ"/>
+                <outlet property="countView" destination="moF-hj-PUS" id="RvX-3J-fHj"/>
+            </connections>
+            <point key="canvasLocation" x="-81.884057971014499" y="264.17410714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_gotoBottom_icon" width="38" height="38"/>
+    </resources>
+</document>

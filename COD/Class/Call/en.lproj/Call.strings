@@ -1,0 +1,30 @@
+
+/* Class = "UISegmentedControl"; 1dz-du-29j.segmentTitles[0] = "全部通话"; ObjectID = "1dz-du-29j"; */
+"1dz-du-29j.segmentTitles[0]" = "全部通话";
+
+/* Class = "UISegmentedControl"; 1dz-du-29j.segmentTitles[1] = "未接来电"; ObjectID = "1dz-du-29j"; */
+"1dz-du-29j.segmentTitles[1]" = "未接来电";
+
+/* Class = "UILabel"; text = "KK"; ObjectID = "Bgd-JD-APk"; */
+"Bgd-JD-APk.text" = "KK";
+
+/* Class = "UISegmentedControl"; Jmb-8Z-ImF.segmentTitles[0] = "全部通话"; ObjectID = "Jmb-8Z-ImF"; */
+"Jmb-8Z-ImF.segmentTitles[0]" = "全部通话";
+
+/* Class = "UISegmentedControl"; Jmb-8Z-ImF.segmentTitles[1] = "未接来电"; ObjectID = "Jmb-8Z-ImF"; */
+"Jmb-8Z-ImF.segmentTitles[1]" = "未接来电";
+
+/* Class = "UILabel"; text = "显示呼叫面板"; ObjectID = "YI1-On-ZTh"; */
+"YI1-On-ZTh.text" = "Display Call Panel";
+
+/* Class = "UILabel"; text = "21:55"; ObjectID = "eO7-a5-MO0"; */
+"eO7-a5-MO0.text" = "21:55";
+
+/* Class = "UILabel"; text = "「呼叫」图标将显示在标签栏上。"; ObjectID = "mvw-GW-mZu"; */
+"mvw-GW-mZu.text" = "The call icon will be displayed on the label bar";
+
+/* Class = "UILabel"; text = "KK"; ObjectID = "pa3-tl-YoV"; */
+"pa3-tl-YoV.text" = "KK";
+
+/* Class = "UILabel"; text = "21:55"; ObjectID = "tSt-d2-uKb"; */
+"tSt-d2-uKb.text" = "21:55";

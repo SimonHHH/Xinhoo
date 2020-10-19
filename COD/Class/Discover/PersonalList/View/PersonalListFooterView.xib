@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalListFooterView" customModule="COD" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIc-mW-Sq2">
+                    <rect key="frame" x="220" y="30" width="136" height="0.5"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="7Hh-lI-9hh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="fpE-Dr-M7d">
+                    <rect key="frame" x="214" y="28" width="4" height="4"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="4" id="6yl-BU-p0u"/>
+                        <constraint firstAttribute="height" constant="4" id="kZN-R9-XDE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xg-tj-E10">
+                    <rect key="frame" x="76" y="30" width="136" height="0.5"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="I7h-w6-RVu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fpE-Dr-M7d" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1GS-IX-3Yx"/>
+                <constraint firstAttribute="trailing" secondItem="EIc-mW-Sq2" secondAttribute="trailing" constant="76" id="6aa-Ph-SF8"/>
+                <constraint firstItem="EIc-mW-Sq2" firstAttribute="leading" secondItem="fpE-Dr-M7d" secondAttribute="trailing" constant="2" id="D9c-uk-03X"/>
+                <constraint firstItem="EIc-mW-Sq2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="I15-Tr-j5U"/>
+                <constraint firstItem="fpE-Dr-M7d" firstAttribute="leading" secondItem="0Xg-tj-E10" secondAttribute="trailing" constant="2" id="Qbr-aq-7VA"/>
+                <constraint firstItem="0Xg-tj-E10" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="76" id="hxu-71-1CY"/>
+                <constraint firstItem="0Xg-tj-E10" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="je8-iw-33b"/>
+                <constraint firstItem="fpE-Dr-M7d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vqe-SC-FXb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1.6000000000000001" y="-295.05247376311848"/>
+        </view>
+    </objects>
+</document>

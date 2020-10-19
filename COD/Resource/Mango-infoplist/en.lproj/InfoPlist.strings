@@ -1,0 +1,17 @@
+/* 
+  InfoPlist.strings
+  COD
+
+  Created by xinhooo on 2019/10/23.
+  Copyright © 2019 XinHoo. All rights reserved.
+*/
+{
+    "NSAppleMusicUsageDescription" = "Mango access to your media database. Is this allowed?";
+    "NSCameraUsageDescription" = "Mango will access your camera in services such as uploading profile pictures. Is this allowed?";
+    "NSContactsUsageDescription" = "Upload your contacts to Mango's server to make it easier for you to add friends and help us provide better service.";
+    "NSLocationWhenInUseUsageDescription" = "Mango USES your location in sending location information. Is this allowed?";
+    "NSMicrophoneUsageDescription" = "Mango will access your microphone functions in services such as recording. Is this allowed?";
+    "NSPhotoLibraryAddUsageDescription" = "Mango will access your album function in services such as uploading profile pictures. Is this allowed?";
+    "NSPhotoLibraryUsageDescription" = "Mango will access your album function in services such as uploading profile pictures. Is this allowed?";
+    "CFBundleDisplayName" = "Mango";
+}

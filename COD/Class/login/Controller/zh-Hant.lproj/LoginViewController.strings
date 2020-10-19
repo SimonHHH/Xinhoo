@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "点击\"下一步\"即表示已阅读并同意"; ObjectID = "AiC-Oh-iGT"; */
+"AiC-Oh-iGT.text" = "點擊\"下一步\"即表示已閱讀並同意";
+
+/* Class = "UILabel"; text = "已有账号?"; ObjectID = "CYX-YV-5bi"; */
+"CYX-YV-5bi.text" = "已有账号?";
+
+/* Class = "UIButton"; normalTitle = "使用密码登录"; ObjectID = "TQr-Md-OsV"; */
+"TQr-Md-OsV.normalTitle" = "使用密码登录";
+
+/* Class = "UITextField"; placeholder = "手机号码"; ObjectID = "U9Q-VP-OkZ"; */
+"U9Q-VP-OkZ.placeholder" = "手机号码";
+
+/* Class = "UIButton"; normalTitle = "《用户使用协议》"; ObjectID = "X3N-Pk-4P3"; */
+"X3N-Pk-4P3.normalTitle" = "《用戶使用協議》";
+
+/* Class = "UILabel"; text = "中国( China)(+86)"; ObjectID = "bbT-Uf-TE2"; */
+"bbT-Uf-TE2.text" = "中国( China)(+86)";
+
+/* Class = "UIButton"; normalTitle = "获取验证码"; ObjectID = "dKN-Jq-zxb"; */
+"dKN-Jq-zxb.normalTitle" = "获取验证码";
+
+/* Class = "UIButton"; normalTitle = "下一步"; ObjectID = "gfc-pk-brA"; */
+"gfc-pk-brA.normalTitle" = "下一步";
+
+/* Class = "UITextField"; placeholder = "验证码"; ObjectID = "o1z-MH-nKJ"; */
+"o1z-MH-nKJ.placeholder" = "验证码";
+
+/* Class = "UILabel"; text = "＊验证码已失效，请重新获取"; ObjectID = "t81-Lu-Z7J"; */
+"t81-Lu-Z7J.text" = "＊验证码已失效，请重新获取";
+
+/* Class = "UILabel"; text = "欢迎来到Flygram"; ObjectID = "xQD-gN-CeA"; */
+"xQD-gN-CeA.text" = "欢迎来到Flygram";

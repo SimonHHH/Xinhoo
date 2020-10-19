@@ -1,0 +1,427 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+require 'net/http'
+require 'net/https'
+require 'json'
+require 'pathname'
+
+$token = ""
+$at_users = [
+  "cod_60000558",
+  "cod_60000044",
+]
+
+default_platform(:ios)
+
+
+
+require 'net/http'
+require 'net/https'
+
+
+def bulid_at_text(params)
+  at_str = ""
+  for user in params[:users]
+    at_str += "<a href ='tg://user?id=#{user}'></a>"
+  end
+  puts at_str
+  return at_str
+end
+
+def upload(params)
+
+  require 'net/http'
+  require 'uri'
+  require 'json'
+  require 'mime/types'
+  require 'pathname'
+
+  uri = params[:uri]
+  # BOUNDARY = "WebKitFormBoundaryxiptAHwq2mYiB2gs"
+  # BOUNDARY = "AaB03x"
+  boundary = "WebKitFormBoundaryxiptAHwq2mYiB2gs"
+
+  header = {"Content-Type": "multipart/form-data, boundary=#{boundary}", "Token": "#{$token}", "Content-Type": "application/json", "Authorization": "eXwdrXrvrjsHDs7F"}
+  file = params[:file]
+  versionID = params[:versionID]
+
+  # We're going to compile all the parts of the body into an array, then join them into one single string
+  # This method reads the given file into memory all at once, thus it might not work well for large files
+  post_body = []
+
+  
+
+  # Add the file Data
+  post_body << "--#{boundary}\r\n"
+  post_body << "Content-Disposition: form-data; name=\"file\"; filename=\"#{Pathname.new(file).basename}\"\r\n"
+  post_body << "Content-Type: #{MIME::Types.type_for(file)}\r\n\r\n"
+  post_body << File.read(file)
+
+  # Add the JSON
+  post_body << "--#{boundary}\r\n"
+  post_body << "Content-Disposition: form-data; name=\"versionID\"\r\n\r\n"
+  post_body << versionID
+  post_body << "\r\n\r\n--#{boundary}--\r\n"
+
+  # Create the HTTP objects
+  http = Net::HTTP.new(uri.host, uri.port)
+  request = Net::HTTP::Post.new(uri.request_uri, header)
+  request.body = post_body.join
+
+  # Send the request
+  response = http.request(request)
+  puts "Response HTTP Status Code: #{response.code}"
+  puts "Response HTTP Response Body: #{response.body}"
+  rescue StandardError => e
+  puts "HTTP Request failed (#{e.message})"
+
+end
+
+# cURL (POST )
+def upload_ipa(params)
+
+  path = lane_context[SharedValues::IPA_OUTPUT_PATH]
+  pn = Pathname.new(path)
+  versionID = params[:versionID]
+  command = "python #{Dir.pwd}/upload.py --file='#{path}' --version-id='#{versionID}' --token='#{$token}' "
+  sh "#{command}"
+
+end
+
+
+
+def send_request(params) 
+
+  uri = params[:uri]
+
+  # Create client
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+  dict = params[:dict]
+  body = JSON.dump(dict)
+
+  req =  Net::HTTP::Get.new(uri)
+  if params[:method] == "post"
+    req =  Net::HTTP::Post.new(uri)
+  end
+
+  # Create Request
+  
+  # Add headers
+  req.add_field "Authorization", "eXwdrXrvrjsHDs7F"
+  # Add headers
+  req.add_field "Content-Type", "application/json"
+
+  req.add_field "Token", $token
+  # Set body
+  req.body = body
+
+  # Fetch Request
+  res = http.request(req)
+  puts "Response HTTP Status Code: #{res.code}"
+  puts "Response HTTP Response Body: #{res.body}"
+  return res
+  rescue StandardError => e
+  puts "HTTP Request failed (#{e.message})"
+
+end
+
+def login() 
+
+  uri = URI('https://cod.xinhoo.com:9091/plugins/xhcodrestapi/v1/adminservice/getToken')
+
+  re = send_request(uri: uri, method: "post")
+
+  token = JSON.parse(re.body)["token"]
+
+  uri = URI('https://cod.xinhoo.com:9091/plugins/xhcodrestapi/v1/adminservice/login')
+
+  dict = {
+            "username" => "zhishui",
+            "password" => "cdad6b919bf5d7168ecf77cccb220c6a",
+            "picCode" => "1111",
+            "loginToken" => token
+        }
+
+  re = send_request(uri: uri, dict: dict, method: "post")
+
+  $token = JSON.parse(re.body)["token"]
+
+end
+
+def createversion()
+
+  uri = URI('https://cod.xinhoo.com:9091/plugins/xhcodrestapi/v1/updateservice/createversion')
+
+  dict = {
+            "appUrl" => "",
+            "appVersion" => "",
+            "content" => "测试版本更新",
+            "outsiteUpdateShow" => true,
+            "forcedUpdate" => false,
+            "resource" => "IOS",
+            "outsiteUpdate" => false,
+            "title" => "版本更新",
+            "dsasignature" => ""
+        }
+
+  re = send_request(uri: uri, dict: dict, method: "post")
+  return JSON.parse(re.body)["versionID"]
+
+end
+
+def publishversion(params)
+
+  uri = URI('https://cod.xinhoo.com:9091/plugins/xhcodrestapi/v1/updateservice/publishversion')
+  versionID = params[:versionID]
+
+  dict = {
+            "versionID" => versionID,
+        }
+
+  re = send_request(uri: uri, dict: dict, method: "post")
+
+  
+
+end
+
+def upload_to_xinhoo()
+
+  login
+  versionID = createversion
+  upload_ipa(versionID: versionID)
+  publishversion(versionID: versionID)
+
+end
+
+# Request (GET )
+def send_Msg(params)
+
+  uri = URI("https://cod.xinhoo.com:9091/plugins/xhcodrestapi/v1/apiservice/user#{ENV["ROBOT_USER_NAME"]}:#{ENV["ROBOT_TOKEN"]}/sendmessage_v2")
+  dict = {
+            "text" => "#{params[:text]}",
+            "targetname" => "#{ENV["ROOM_NAME"]}",
+            "chatType" => "#{ENV["ROBOT_CHAT_TYPE"]}",
+            "model" => "1"
+        }
+
+  send_request(uri: uri, dict: dict)
+
+end
+
+
+platform :ios do
+
+  bulid_setp = ""
+
+  desc "IM"
+  lane :im do
+
+    git_pull
+
+    bulid_setp = "build_app"
+    build_app(
+      workspace: "COD.xcworkspace",
+      configuration: "Release",
+      scheme: "COD",
+      export_method: "ad-hoc",
+      export_options: {
+        iCloudContainerEnvironment: 'Production',
+      },
+      silent: true,
+      clean: true,
+      output_directory: "./", # Destination directory. Defaults to current directory.
+      output_name: "IM.ipa")
+
+      bulid_setp = "pgyer"
+      pgyer(api_key: ENV["PGYER_API_KEY"], user_key: ENV["PGYER_USER_KEY"])
+
+      get_ipa_info_plist_value(ipa: "#{lane_context[SharedValues::IPA_OUTPUT_PATH]}", key: "CFBundleShortVersionString")
+
+      # bulid_setp = "upload_to_xinhoo"
+      # upload_to_xinhoo()
+
+      at_text = bulid_at_text(users: $at_users)
+
+      send_Msg(text: "<p>星河IM(#{lane_context[SharedValues::GET_IPA_INFO_PLIST_VALUE_CUSTOM_VALUE]})已发包!</p>
+      <p>您可以到
+      <a href='https://www.pgyer.com/fCeh'>https://www.pgyer.com/fCeh</a>
+      </p>
+      <p>自行安装或者等管理员上传到管理后台后进行自动升级</p>
+      #{at_text}")
+
+      bulid_setp = "appcenter_upload"
+      appcenter_upload(api_token: 'e5c7aa35c844e96e86d27d48eed1a411f0290074',
+      dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH],
+      owner_name: 'EXCELLENT-FUSION-SDN.-BHD.',
+      destinations: 'Bate',
+      app_name: 'iOS_XinhooIM')
+
+      
+
+      notification(subtitle: "Finished Building", message: "Finished Building")
+
+  end
+
+  desc "Mango"
+  lane :mango do
+
+    git_pull
+
+    bulid_setp = "build_app"
+    build_app(
+      workspace: "COD.xcworkspace",
+      configuration: "Release",
+      scheme: "COD_Mango",
+      export_method: "ad-hoc",
+      export_options: {
+        iCloudContainerEnvironment: 'Production',
+      },
+      silent: true,
+      clean: true,
+      output_directory: "./", # Destination directory. Defaults to current directory.
+      output_name: "Mango.ipa")
+
+      bulid_setp = "pgyer"
+      pgyer(api_key: ENV["PGYER_API_KEY"], user_key: ENV["PGYER_USER_KEY"])
+
+      at_text = bulid_at_text(users: $at_users)
+
+      get_ipa_info_plist_value(ipa: "#{lane_context[SharedValues::IPA_OUTPUT_PATH]}", key: "CFBundleShortVersionString")
+
+      send_Msg(text: "<p>Mango(#{lane_context[SharedValues::GET_IPA_INFO_PLIST_VALUE_CUSTOM_VALUE]})已发包!</p>
+      <p>您可以到
+      <a href='https://www.pgyer.com/H3yn'>https://www.pgyer.com/H3yn</a>
+      </p>
+      <p> 自行安装 </p>
+      #{at_text}")
+
+      get_ipa_info_plist_value(ipa: "#{lane_context[SharedValues::IPA_OUTPUT_PATH]}", key: "CFBundleShortVersionString")
+
+      bulid_setp = "appcenter_upload"
+      appcenter_upload(api_token: 'e5c7aa35c844e96e86d27d48eed1a411f0290074', 
+      dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH], 
+      owner_name: 'EXCELLENT-FUSION-SDN.-BHD.', 
+      destinations: 'Bate', 
+      app_name: 'iOS_Mango')
+
+      notification(subtitle: "Finished Building", message: "Finished Building")
+      
+
+  end
+
+  desc "Flygram"
+  lane :flygram do
+
+    git_pull
+
+    build_app(
+      workspace: "COD.xcworkspace",
+      configuration: "Release",
+      scheme: "COD_Pro",
+      export_method: "ad-hoc",
+      export_options: {
+        iCloudContainerEnvironment: 'Production',
+      },
+      silent: true,
+      clean: true,
+      output_directory: "./", # Destination directory. Defaults to current directory.
+      output_name: "Flygram.ipa")
+
+      pgyer(api_key: ENV["PGYER_API_KEY"], user_key: ENV["PGYER_USER_KEY"])
+
+      get_ipa_info_plist_value(ipa: "#{lane_context[SharedValues::IPA_OUTPUT_PATH]}", key: "CFBundleShortVersionString")
+
+      send_Msg(text: "Flygram(#{lane_context[SharedValues::GET_IPA_INFO_PLIST_VALUE_CUSTOM_VALUE]})已发包: \n 您到在 https://www.pgyer.com/fw6L 自行安装 ")
+
+      gym(scheme: "COD_Pro", skip_build_archive: true,
+        export_options: {
+          method: "app-store"
+       },
+       archive_path: lane_context[SharedValues::XCODEBUILD_ARCHIVE]
+      )
+
+
+      upload_to_app_store(username: 'excellentfusion@gmail.com', force: true, run_precheck_before_submit: false, skip_screenshots: false)
+
+      appcenter_upload(api_token: 'e5c7aa35c844e96e86d27d48eed1a411f0290074', dsym: lane_context[SharedValues::DSYM_OUTPUT_PATH], owner_name: 'EXCELLENT-FUSION-SDN.-BHD.', app_name: 'iOS_Flygram')
+
+      notification(subtitle: "Finished Building", message: "Finished Building")
+
+
+  end
+
+  desc "Update version"
+  lane :update_version do
+
+    git_pull
+    
+    increment_version_number(bump_type: "patch")
+
+    version = get_version_number(xcodeproj: "COD.xcodeproj",target: "COD")
+
+    commit_version_bump(message: "chore: 🤖 #{version}")
+
+    push_to_git_remote
+
+  end
+
+  desc "Send Text"
+  lane :sendText do
+
+    puts "#{ENV["ROBOT_TOKEN"]}"
+    puts "#{ENV["ROBOT_USER_NAME"]}"
+    puts "#{ENV["ROOM_NAME"]}"
+
+    ENV["ROOM_NAME"] = "codm_1080026813"
+    ENV["ROBOT_TOKEN"] = "8cb76875552040cb850d492552161818"
+    ENV["ROBOT_USER_NAME"] = "cod_60013981"
+    ENV["Remind_USERS"] = ""
+
+    at_text = bulid_at_text(users: $at_users)
+
+    send_Msg(text: "<p>星河IM(#{lane_context[SharedValues::GET_IPA_INFO_PLIST_VALUE_CUSTOM_VALUE]})已发包!</p>
+    <p>您可以到
+    <a href='https://install.appcenter.ms/orgs/excellent-fusion-sdn.-bhd./apps/ios_xinhooim/distribution_groups/bate'>https://install.appcenter.ms/orgs/excellent-fusion-sdn.-bhd./apps/ios_xinhooim/distribution_groups/bate</a>
+    </p>
+    <p>自行安装或者等管理员上传到管理后台后进行自动升级</p>
+    #{at_text}")
+
+  end
+
+    error do |lane, exception|
+
+    if bulid_setp == "build_app"
+      send_Msg(text: "打包编译失败，请确认提交的代码是否能正确编译")
+    elsif bulid_setp == "pgyer"
+      send_Msg(text: "包文件上传蒲公英失败，请自行手动上传包文件")
+    elsif bulid_setp == "upload_to_xinhoo"
+      send_Msg(text: "因为一些灵异的原因，包文件上传管理后台失败，请自行手动上传或从到蒲公英更新最新包")
+    elsif bulid_setp == "appcenter_upload"
+      send_Msg(text: "dsym 上传 AppCenter 失败，请手动上传")
+    elsif bulid_setp == "appcenter_upload_api"
+      send_Msg(text: "ipa 上传 AppCenter 失败，请管理员请手动上传")
+    else
+      send_Msg(text: "打包失败")
+    end
+
+    
+  end
+
+
+
+end

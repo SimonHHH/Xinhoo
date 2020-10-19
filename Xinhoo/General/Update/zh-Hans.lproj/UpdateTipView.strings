@@ -1,0 +1,9 @@
+
+/* Class = "UITextView"; text = "本次发布内容为：\n1.新增语音验证码功能\n2.优化群二维码功能\n3.升级提示多语言适配\n4.发送和查看图片优化\n5.增加支持的图片预览格式\n6.缩略图显示二次优化\n7.增加支持的图片预览格式\";"; ObjectID = "0n1-Tk-0Av"; */
+"0n1-Tk-0Av.text" = "";
+
+/* Class = "UIButton"; normalTitle = "v2.8.9.552"; ObjectID = "BJE-ht-qGm"; */
+"BJE-ht-qGm.normalTitle" = "v2.8.9.552";
+
+/* Class = "UILabel"; text = "发现新版本"; ObjectID = "bEf-NY-nno"; */
+"bEf-NY-nno.text" = "发现新版本";

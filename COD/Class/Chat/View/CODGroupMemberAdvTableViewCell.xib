@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CODGroupMemberAdvTableViewCell" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jl2-Tw-i5E">
+                        <rect key="frame" x="14" y="4" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="03U-fR-Av5"/>
+                            <constraint firstAttribute="height" constant="40" id="9H6-fg-lRr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp1-3M-WhP">
+                        <rect key="frame" x="85" y="4" width="169" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="KGT-cM-EWm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za8-MU-3PC">
+                        <rect key="frame" x="66" y="44" width="188" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30r-UY-xU0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="4ZC-gF-0PD"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAz-P3-Hqk">
+                        <rect key="frame" x="264" y="14" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="CGi-Vm-XeP"/>
+                            <constraint firstAttribute="width" constant="40" id="n5J-Ak-idA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="chat_list_robot" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-1l-Mzg">
+                        <rect key="frame" x="66" y="16" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="hoa-YX-DXp"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="fd_collapsibleConstraints" destination="hoa-YX-DXp" id="4ll-UC-1JM"/>
+                            <outletCollection property="fd_collapsibleConstraints" destination="kLI-vd-8eM" id="3vh-Lp-hHY"/>
+                        </connections>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jl2-Tw-i5E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="2JN-9W-2h1"/>
+                    <constraint firstItem="GAz-P3-Hqk" firstAttribute="centerY" secondItem="jl2-Tw-i5E" secondAttribute="centerY" id="6gz-68-9ET"/>
+                    <constraint firstItem="Za8-MU-3PC" firstAttribute="leading" secondItem="jl2-Tw-i5E" secondAttribute="trailing" constant="12" id="8Wk-29-TWh"/>
+                    <constraint firstItem="jl2-Tw-i5E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="DTp-Kj-o8u"/>
+                    <constraint firstAttribute="trailing" secondItem="30r-UY-xU0" secondAttribute="trailing" id="IU8-Dv-bqU"/>
+                    <constraint firstItem="Lp1-3M-WhP" firstAttribute="top" secondItem="30r-UY-xU0" secondAttribute="bottom" constant="3.5" id="IpQ-UC-2Tx"/>
+                    <constraint firstItem="Za8-MU-3PC" firstAttribute="bottom" secondItem="jl2-Tw-i5E" secondAttribute="bottom" id="Or3-OB-5lq"/>
+                    <constraint firstItem="Lp1-3M-WhP" firstAttribute="top" secondItem="jl2-Tw-i5E" secondAttribute="top" id="RJp-a4-6PN"/>
+                    <constraint firstItem="0rb-1l-Mzg" firstAttribute="leading" secondItem="jl2-Tw-i5E" secondAttribute="trailing" constant="12" id="RgX-Zh-lop"/>
+                    <constraint firstItem="Za8-MU-3PC" firstAttribute="top" secondItem="Lp1-3M-WhP" secondAttribute="bottom" id="TPZ-Vz-2GD"/>
+                    <constraint firstAttribute="bottom" secondItem="jl2-Tw-i5E" secondAttribute="bottom" constant="4.5" id="bRb-ms-vUU"/>
+                    <constraint firstAttribute="trailing" secondItem="GAz-P3-Hqk" secondAttribute="trailing" constant="16" id="cPo-zh-WZW"/>
+                    <constraint firstItem="Za8-MU-3PC" firstAttribute="trailing" secondItem="Lp1-3M-WhP" secondAttribute="trailing" id="dJw-FU-OK6"/>
+                    <constraint firstItem="30r-UY-xU0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="h84-Pf-hz1"/>
+                    <constraint firstItem="GAz-P3-Hqk" firstAttribute="leading" secondItem="Lp1-3M-WhP" secondAttribute="trailing" constant="10" id="jPA-dk-ww1"/>
+                    <constraint firstItem="Lp1-3M-WhP" firstAttribute="leading" secondItem="0rb-1l-Mzg" secondAttribute="trailing" constant="3" id="kLI-vd-8eM"/>
+                    <constraint firstItem="30r-UY-xU0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="o3Y-y4-Qbz"/>
+                    <constraint firstItem="GAz-P3-Hqk" firstAttribute="top" secondItem="30r-UY-xU0" secondAttribute="bottom" constant="13.5" id="thB-IT-1hD"/>
+                    <constraint firstItem="0rb-1l-Mzg" firstAttribute="centerY" secondItem="Lp1-3M-WhP" secondAttribute="centerY" id="uqR-dV-apH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adminLab" destination="GAz-P3-Hqk" id="0Qz-21-fEH"/>
+                <outlet property="adminLabWidthConstrains" destination="n5J-Ak-idA" id="DTv-D2-5pb"/>
+                <outlet property="imgView" destination="jl2-Tw-i5E" id="gFi-01-roq"/>
+                <outlet property="robootImageView" destination="0rb-1l-Mzg" id="HIu-Ou-OBV"/>
+                <outlet property="subTitleLab" destination="Za8-MU-3PC" id="LMz-0u-4gD"/>
+                <outlet property="titleHeightContrains" destination="KGT-cM-EWm" id="fsP-sM-Bsp"/>
+                <outlet property="titleLab" destination="Lp1-3M-WhP" id="OIQ-nl-To4"/>
+                <outlet property="topLine" destination="30r-UY-xU0" id="vQX-Ca-eyU"/>
+            </connections>
+            <point key="canvasLocation" x="-326.08695652173918" y="94.754464285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chat_list_robot" width="16" height="16"/>
+    </resources>
+</document>

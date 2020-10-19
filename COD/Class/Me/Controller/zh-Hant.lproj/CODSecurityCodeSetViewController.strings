@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "请再次输入锁定码"; ObjectID = "YjC-0T-T1X"; */
+"YjC-0T-T1X.text" = "請再次輸入鎖定碼";
+
+/* Class = "UILabel"; text = "两次密码不一致，请重新输入"; ObjectID = "j30-2z-CxL"; */
+"j30-2z-CxL.text" = "兩次密碼不壹致，請重新輸入";
+
+/* Class = "UILabel"; text = "请输入锁定码"; ObjectID = "pRo-0v-3S3"; */
+"pRo-0v-3S3.text" = "請輸入鎖定碼";

@@ -1,0 +1,6 @@
+framework module LPActionSheet {
+  umbrella header "LPActionSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,17 @@
+/* 
+  InfoPlist.strings
+  COD
+
+  Created by xinhooo on 2019/10/23.
+  Copyright © 2019 XinHoo. All rights reserved.
+*/
+{
+    "NSAppleMusicUsageDescription" = "Flygram訪問您的媒體資料庫，是否允許訪問？";
+    "NSCameraUsageDescription" = "Flygram會在上傳頭像等服務中訪問您的相機，是否允許訪問？";
+    "NSContactsUsageDescription" = "將您的聯系人上傳到 Flygram 的服務器，以便您更方便的添加好友，並幫助我們提供更好的服務。";
+    "NSLocationWhenInUseUsageDescription" = "Flygram會在發送位置信息中使用您的定位，是否允許訪問？";
+    "NSMicrophoneUsageDescription" = "Flygram會在錄音等服務中訪問您的麥克風功能，是否允許訪問？";
+    "NSPhotoLibraryAddUsageDescription" = "Flygram會在上傳頭像等服務中訪問您的相冊功能，是否允許訪問？";
+    "NSPhotoLibraryUsageDescription" = "Flygram會在上傳頭像等服務中訪問您的相冊功能，是否允許訪問？";
+    "CFBundleDisplayName" = "Flygram";
+}

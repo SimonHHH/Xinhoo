@@ -1,0 +1,189 @@
+//
+//  CODMessageModelTool.swift
+//  COD
+//
+//  Created by 1 on 2019/4/24.
+//  Copyright © 2019 XinHoo. All rights reserved.
+//
+
+import UIKit
+
+class CODMessageModelTool: NSObject {
+    static var `default`: CODMessageModelTool  = CODMessageModelTool()
+
+    func createBaseModel(msgID: String, toJID :String, chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        let model = CODMessageModel.init()
+        model.toJID = toJID
+        model.fromWho = UserManager.sharedInstance.jid
+        model.fromJID = UserManager.sharedInstance.jid
+        model.msgID = msgID
+        model.status =  CODMessageStatus.Pending.rawValue
+        model.chatTypeEnum = chatType
+        let timestr = String(format: "%ld", Int(Date.milliseconds)+UserManager.sharedInstance.timeStamp)
+        model.datetime = timestr
+        model.datetimeInt = Int(Date.milliseconds)+UserManager.sharedInstance.timeStamp
+        model.burn = burn
+        
+        switch model.chatTypeEnum {
+        case .groupChat, .channel:
+            model.roomId = roomId!.int!
+            if let messageHistoryModelTemp = CODChatHistoryRealmTool.getChatHistory(from: (roomId?.int)!){
+                if let lastMsg = messageHistoryModelTemp.messages.sorted(byKeyPath: "datetime", ascending: true).last {
+
+                    model.isShowDate = !CustomUtil.isSameDay(starTime: lastMsg.datetime as NSString, endTime: model.datetime as NSString)
+                }else{
+                    model.isShowDate = true
+                }
+                
+            }else{
+                model.isShowDate = true
+            }
+            
+        case .privateChat:
+            if let messageHistoryModelTemp = CODChatHistoryRealmTool.getChatHistory(from: chatId){
+                            if let lastMsg = messageHistoryModelTemp.messages.sorted(byKeyPath: "datetime", ascending: true).last {
+            //                    model.isShowDate = (CustomUtil.getTimeDiff(starTime: lastMsg.datetime as NSString, endTime: model.datetime as NSString) > 300)
+                                model.isShowDate = !CustomUtil.isSameDay(starTime: lastMsg.datetime as NSString, endTime: model.datetime as NSString)
+                            }else{
+                                model.isShowDate = true
+                            }
+                        }else{
+                            model.isShowDate = true
+                        }
+        }
+
+        
+        // 如果从数据库取到指定联系人的聊天记录，就把它遍历放到chatHistoryModel.messages中
+        //        if let messageHistoryModelTemp = CODChatHistoryRealmTool.getChatHistory(from: contact.rosterID) {
+        //            let messageHistoryList = messageHistoryModelTemp.messages
+        //            for message in messageHistoryList{
+        //                chatHistoryModel.messages.append(message)
+        //            }
+        //
+        //            let lastMsg = messageHistoryModelTemp.messages.filter("isShowDate = true").sorted(byKeyPath: "datetime", ascending: true).last
+        //            message.isShowDate = (CustomUtil.getTimeDiff(starTime: lastMsg!.datetime as NSString, endTime: message.datetime as NSString) > 300)
+        //
+        //        }else{
+        //            message.isShowDate = true
+        //        }
+        
+        return model
+    }
+    
+    //文本model
+    func createTextModel(msgID:String, toJID :String, textString: String, chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId, burn: burn)
+        model.type = .text
+//        model.attrText = String.messageTextTranscode(text:textString)
+        model.text = textString
+
+        return model
+    }
+    
+    //位置model
+    func createLocationModel(msgID:String, toJID :String ,longitude :CGFloat,latitude :CGFloat,titleString :String,subtitleString :String,pictrueImage :UIImage, chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .location
+        model.location = LocationInfo()
+        //        let longStr = String(format: "%f", currenPOI.pt.longitude)
+        //        let latitudeStr = String(format: "%f", currenPOI.pt.latitude)
+        model.location?.longitude = Double(longitude)
+        model.location?.latitude = Double(latitude)
+        model.location?.name = titleString
+        model.location?.address = subtitleString
+        model.location?.loactionImageData = pictrueImage.pngData()
+        
+        return model
+    }
+    
+    //图片
+    func createPhotoModel(msgID:String, toJID :String,photoImage: UIImage,chatType: CODMessageChatType, ishdimg: Bool,roomId: String?,chatId: Int,burn: Int,description: String = "") -> CODMessageModel {
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId,chatId: chatId,burn: burn)
+        model.type = .image
+        model.photoModel = PhotoModelInfo()
+        model.photoModel?.photoImageData = photoImage.pngData()
+        model.photoModel?.h = photoImage.size.height
+        model.photoModel?.w = photoImage.size.width
+        model.photoModel?.descriptionImage = description
+        model.photoModel?.ishdimg = ishdimg
+        
+        return model
+    }
+    
+    //录音
+    func createAudioModel(msgID:String, toJID :String,duration: CGFloat,audioData: NSData,audioLocalURl: String,chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .audio
+        model.audioModel = AudioModelInfo()
+        model.audioModel?.audioDuration = duration
+        model.audioModel?.audioData = audioData
+        model.audioModel?.audioLocalURL = audioLocalURl
+        return model
+        
+    }
+    
+    //短视频
+    func createVideoModel(msgID:String, toJID :String,duration: CGFloat,firstpicImage: UIImage,mediaData: Data,videoLocalURl: String,chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int,description: String = "") -> CODMessageModel {
+        
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .video
+        model.videoModel = VideoModelInfo()
+        model.videoModel?.videoDuration = duration
+        model.videoModel?.firstpicData = ImageCompress.resetImgSize(sourceImage: firstpicImage, maxImageLenght: KScreenHeight, maxSizeKB: 600)
+        model.videoModel?.h = firstpicImage.size.height
+        model.videoModel?.w = firstpicImage.size.width
+        model.videoModel?.videoLocalURL = videoLocalURl
+//        model.videoModel?.videoData = mediaData
+        model.videoModel?.videoDuration = duration
+        model.videoModel?.descriptionVideo = description
+
+        return model
+        
+    }
+    //发送名片
+    func createBusinessCardModel(msgID:String, toJID :String, username: String,name: String,userdesc: String,userpic: String,jid : String,gender: String, chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .businessCard
+        model.businessCardModel = BusinessCardModelInfo()
+        model.businessCardModel?.username = username
+        model.businessCardModel?.name = name
+        model.businessCardModel?.userdesc = userdesc
+        model.businessCardModel?.userpic = userpic
+        model.businessCardModel?.jid = jid
+        model.businessCardModel?.gender = gender
+        
+        return model
+    }
+    
+    //发送语音聊天
+
+    func createVideoCallModel(msgID:String, toJID :String,duration:Int = 0, chatType: CODMessageChatType, roomId: String?,chatId: Int,type:String,burn: Int) -> CODMessageModel {
+        
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .voiceCall
+        model.videoCallModel = VideoCallModelInfo()
+        model.videoCallModel?.videoString = type
+        model.videoCallModel?.duration = duration
+        model.videoCallModel?.room = String.randomSmallCaseString(length: 32)
+        return model
+        
+    }
+    //发送已读回执
+    func createHaveReadModel(msgID:String,lastMessageTime: String,toJID :String,chatType: CODMessageChatType, roomId: String?,chatId: Int,burn: Int) -> CODMessageModel {
+        
+        let model = self.createBaseModel(msgID: msgID, toJID: toJID, chatType: chatType, roomId: roomId, chatId: chatId,burn: burn)
+        model.type = .haveRead
+        model.datetime = lastMessageTime
+        return model
+        
+    }
+    
+    //以下为新消息
+    func createNewMessageCountMessage() -> CODMessageModel {
+        let model = CODMessageModel.init()
+        model.type = .newMessage
+        return model
+    }
+}

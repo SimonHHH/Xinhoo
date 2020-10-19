@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CODSelectViewSearchCell" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <textField opaque="NO" tag="999" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8PI-2e-leX" customClass="CODTextField" customModule="COD" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="8" width="50" height="19"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="BqH-cT-Br6"/>
+                        </connections>
+                    </textField>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8PI-2e-leX" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="P4i-0x-XtO"/>
+                <constraint firstAttribute="trailing" secondItem="8PI-2e-leX" secondAttribute="trailing" id="XGd-Wf-iMW"/>
+                <constraint firstItem="8PI-2e-leX" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fJu-YB-4UM"/>
+                <constraint firstItem="8PI-2e-leX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kf7-Uu-viE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="textField" destination="8PI-2e-leX" id="i1j-2x-PvB"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </collectionViewCell>
+    </objects>
+</document>

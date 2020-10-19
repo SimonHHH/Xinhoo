@@ -1,0 +1,6 @@
+framework module Pods_CODUnitTests {
+  umbrella header "Pods-CODUnitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

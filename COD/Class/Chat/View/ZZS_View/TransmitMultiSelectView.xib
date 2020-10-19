@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TransmitMultiSelectView" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="257" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送给：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-Cx-gWL">
+                    <rect key="frame" x="20" y="5" width="217" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-hK-JU6">
+                    <rect key="frame" x="20" y="34" width="217" height="55"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="tLD-Sn-6R1"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="8" id="2w7-hZ-hdG">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="TNB-Vm-K3B"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="wPh-Sk-FYn"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYc-SR-Lv1">
+                    <rect key="frame" x="20" y="97" width="217" height="0.5"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="ADi-5O-cFt"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[转发]共8条消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqa-YJ-FEX">
+                    <rect key="frame" x="20" y="109.5" width="217" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwu-5f-lAE">
+                    <rect key="frame" x="20" y="140.5" width="217" height="40"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="04p-Kr-aRr" customClass="CustomTextView" customModule="COD" customModuleProvider="target">
+                            <rect key="frame" x="8" y="0.0" width="201" height="40"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="xO5-o1-Tyf"/>
+                            </connections>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="T0t-de-s6y"/>
+                        <constraint firstAttribute="trailing" secondItem="04p-Kr-aRr" secondAttribute="trailing" constant="8" id="a7a-vY-ces"/>
+                        <constraint firstItem="04p-Kr-aRr" firstAttribute="leading" secondItem="xwu-5f-lAE" secondAttribute="leading" constant="8" id="jHz-BF-Nwj"/>
+                        <constraint firstAttribute="bottom" secondItem="04p-Kr-aRr" secondAttribute="bottom" id="jZJ-re-Lup"/>
+                        <constraint firstItem="04p-Kr-aRr" firstAttribute="top" secondItem="xwu-5f-lAE" secondAttribute="top" id="v3J-hk-rEV"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xwu-5f-lAE" firstAttribute="top" secondItem="dqa-YJ-FEX" secondAttribute="bottom" constant="14" id="3Yr-uy-xG3"/>
+                <constraint firstItem="xwu-5f-lAE" firstAttribute="trailing" secondItem="dqa-YJ-FEX" secondAttribute="trailing" id="3g7-up-Eb2"/>
+                <constraint firstItem="dqa-YJ-FEX" firstAttribute="leading" secondItem="gYc-SR-Lv1" secondAttribute="leading" id="9DJ-TD-wIQ"/>
+                <constraint firstItem="PNg-hK-JU6" firstAttribute="trailing" secondItem="X7W-Cx-gWL" secondAttribute="trailing" id="E6u-Cf-cqR"/>
+                <constraint firstItem="PNg-hK-JU6" firstAttribute="top" secondItem="X7W-Cx-gWL" secondAttribute="bottom" constant="8" id="EaS-74-2fI"/>
+                <constraint firstItem="gYc-SR-Lv1" firstAttribute="trailing" secondItem="PNg-hK-JU6" secondAttribute="trailing" id="GFo-gk-9KD"/>
+                <constraint firstItem="dqa-YJ-FEX" firstAttribute="top" secondItem="gYc-SR-Lv1" secondAttribute="bottom" constant="12" id="UHM-cd-KZg"/>
+                <constraint firstItem="dqa-YJ-FEX" firstAttribute="trailing" secondItem="gYc-SR-Lv1" secondAttribute="trailing" id="ZZf-KY-6rB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X7W-Cx-gWL" secondAttribute="trailing" constant="20" id="gAz-yI-f5M"/>
+                <constraint firstItem="gYc-SR-Lv1" firstAttribute="top" secondItem="PNg-hK-JU6" secondAttribute="bottom" constant="8" id="geg-cA-tEn"/>
+                <constraint firstItem="xwu-5f-lAE" firstAttribute="leading" secondItem="dqa-YJ-FEX" secondAttribute="leading" id="ijJ-wp-1We"/>
+                <constraint firstItem="gYc-SR-Lv1" firstAttribute="leading" secondItem="PNg-hK-JU6" secondAttribute="leading" id="kRk-Nu-Di2"/>
+                <constraint firstItem="PNg-hK-JU6" firstAttribute="leading" secondItem="X7W-Cx-gWL" secondAttribute="leading" id="qc0-Ag-Pxs"/>
+                <constraint firstItem="X7W-Cx-gWL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="rYA-Ku-mcs"/>
+                <constraint firstItem="X7W-Cx-gWL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vfy-QZ-d9u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="PNg-hK-JU6" id="Wsx-i8-sQ6"/>
+                <outlet property="remarkTF" destination="04p-Kr-aRr" id="kBp-vs-qWX"/>
+                <outlet property="sendLab" destination="X7W-Cx-gWL" id="8Ud-pc-DoA"/>
+                <outlet property="totalMsgLab" destination="dqa-YJ-FEX" id="hgM-X2-oKd"/>
+            </connections>
+            <point key="canvasLocation" x="251.44927536231887" y="-55.580357142857139"/>
+        </view>
+    </objects>
+</document>

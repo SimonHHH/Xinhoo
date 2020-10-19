@@ -1,0 +1,6 @@
+framework module Pods_COD_Pro {
+  umbrella header "Pods-COD_Pro-umbrella.h"
+
+  export *
+  module * { export * }
+}

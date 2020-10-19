@@ -1,0 +1,17 @@
+/* 
+  InfoPlist.strings
+  COD
+
+  Created by xinhooo on 2019/10/23.
+  Copyright © 2019 XinHoo. All rights reserved.
+*/
+{
+    "NSAppleMusicUsageDescription" = "Mango访问您的媒体资料库，是否允许访问？";
+    "NSCameraUsageDescription" = "Mango会在上传头像等服务中访问您的相机，是否允许访问？";
+    "NSContactsUsageDescription" = "将您的联系人上传到 Mango 的服务器，以便您更方便的添加好友，并帮助我们提供更好的服务。";
+    "NSLocationWhenInUseUsageDescription" = "Mango会在发送位置信息中使用您的定位，是否允许访问？";
+    "NSMicrophoneUsageDescription" = "Mango会在录音等服务中访问您的麦克风功能，是否允许访问？";
+    "NSPhotoLibraryAddUsageDescription" = "Mango会在上传头像等服务中访问您的相册功能，是否允许访问？";
+    "NSPhotoLibraryUsageDescription" = "Mango会在上传头像等服务中访问您的相册功能，是否允许访问？";
+    "CFBundleDisplayName" = "Mango";
+}

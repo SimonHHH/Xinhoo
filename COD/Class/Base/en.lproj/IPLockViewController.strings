@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "IM服务已经限制使用"; ObjectID = "7fr-wN-fFP"; */
+"7fr-wN-fFP.text" = "IM service is restricted";
+
+/* Class = "UILabel"; text = "你已离开安全使用环境\n进入安全使用环境后自动解除限制"; ObjectID = "tCr-pq-9Xx"; */
+"tCr-pq-9Xx.text" = "You are out of safe environment\nRestriction will be cleared when you are in safe environment";

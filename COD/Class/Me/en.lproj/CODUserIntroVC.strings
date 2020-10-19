@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "可填写个人简介，例如年龄、工作或城市。"; ObjectID = "Hdv-jW-ClK"; */
+"Hdv-jW-ClK.text" = "Write  profile，such as age，job or city.";
+
+/* Class = "UITextField"; placeholder = "设置简介"; ObjectID = "LF0-tZ-ajs"; */
+"LF0-tZ-ajs.placeholder" = "Write profile";
+
+/* Class = "UILabel"; text = "简介"; ObjectID = "TAV-h4-IVL"; */
+"TAV-h4-IVL.text" = "Profile";
+
+/* Class = "UILabel"; text = "30"; ObjectID = "gdu-pg-0yH"; */
+"gdu-pg-0yH.text" = "30";

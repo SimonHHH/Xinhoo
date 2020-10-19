@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "请输入要设置登录密码的手机号码"; ObjectID = "MAL-Ht-utG"; */
+"MAL-Ht-utG.text" = "请输入要设置登录密码的手机号码";
+
+/* Class = "UILabel"; text = "中国( China)(+86)"; ObjectID = "QlQ-2F-6QU"; */
+"QlQ-2F-6QU.text" = "中国( China)(+86)";
+
+/* Class = "UITextField"; placeholder = "手机号码"; ObjectID = "dfS-JE-wpt"; */
+"dfS-JE-wpt.placeholder" = "手机号码";
+
+/* Class = "UIButton"; normalTitle = "下一步"; ObjectID = "oL6-2v-Hdg"; */
+"oL6-2v-Hdg.normalTitle" = "下一步";

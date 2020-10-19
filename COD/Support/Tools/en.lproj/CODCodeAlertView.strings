@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "MJX-xb-4eg"; */
+"MJX-xb-4eg.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "看不清？换一张"; ObjectID = "Rvk-WW-Y3K"; */
+"Rvk-WW-Y3K.text" = "Can't see clearly?\n Change one";
+
+/* Class = "UILabel"; text = "请输入验证码"; ObjectID = "hjA-74-kgj"; */
+"hjA-74-kgj.text" = "Enter the verification code";
+
+/* Class = "UILabel"; text = "*输入错误请重试"; ObjectID = "kJX-ET-1Sq"; */
+"kJX-ET-1Sq.text" = "*Input error, please re-enter";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "uLn-VG-cX4"; */
+"uLn-VG-cX4.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "输入图片中的字符"; ObjectID = "yzr-BG-bH3"; */
+"yzr-BG-bH3.placeholder" = "Characters of the picture";

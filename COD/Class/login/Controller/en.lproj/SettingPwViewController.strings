@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "+86 13600000000"; ObjectID = "DwJ-Fo-kDi"; */
+"DwJ-Fo-kDi.text" = "+86 13600000000";
+
+/* Class = "UITextField"; placeholder = "请输入登录密码"; ObjectID = "MPa-KA-XjE"; */
+"MPa-KA-XjE.placeholder" = "Please enter your login password";
+
+/* Class = "UIButton"; normalTitle = "Confrim Reset"; ObjectID = "QTx-cP-r9R"; */
+"QTx-cP-r9R.normalTitle" = "Confrim Reset";
+
+/* Class = "UITextField"; placeholder = "请再次输入登录密码"; ObjectID = "qhQ-dG-OSF"; */
+"qhQ-dG-OSF.placeholder" = "Please enter your login password again";

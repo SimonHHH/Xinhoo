@@ -1,0 +1,6 @@
+
+/* Class = "UILabel"; text = "请输入Flygram锁定码"; ObjectID = "FtR-kN-zNw"; */
+"FtR-kN-zNw.text" = "请输入Flygram锁定码";
+
+/* Class = "UILabel"; text = "两次密码不一致，请重新输入"; ObjectID = "sxS-Va-Wrq"; */
+"sxS-Va-Wrq.text" = "两次密码不一致，请重新输入";

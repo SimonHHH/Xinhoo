@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="KGk-i7-Jjw" customClass="CODGroupNameAndAvatarCell" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" clipsSubviews="YES" tag="888" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNK-Zh-Tqk">
+                        <rect key="frame" x="14" y="9" width="67" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="Yh6-RR-hbN"/>
+                            <constraint firstAttribute="width" constant="67" id="cXf-yS-efw"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="select_group_avatar"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="33.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="selectAvatar:" destination="KGk-i7-Jjw" eventType="touchDown" id="YX8-kn-9WF"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="群组名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-0S-7pz">
+                        <rect key="frame" x="92" y="30" width="212" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yc-iY-cMP">
+                        <rect key="frame" x="92" y="58" width="228" height="0.5"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Kxg-Me-jPd"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wry-bY-sCT">
+                        <rect key="frame" x="14" y="92" width="306" height="1"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LND-m8-5AD"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILw-pj-SM5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="gpp-bK-2rU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wfB-0S-7pz" firstAttribute="leading" secondItem="vNK-Zh-Tqk" secondAttribute="trailing" constant="11" id="5sS-Ds-Mfh"/>
+                    <constraint firstAttribute="bottom" secondItem="vNK-Zh-Tqk" secondAttribute="bottom" constant="16.5" id="78w-w9-gcH"/>
+                    <constraint firstAttribute="trailing" secondItem="9yc-iY-cMP" secondAttribute="trailing" id="CfL-sI-gwQ"/>
+                    <constraint firstItem="wfB-0S-7pz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="NLZ-60-aff"/>
+                    <constraint firstAttribute="trailing" secondItem="Wry-bY-sCT" secondAttribute="trailing" id="OPk-t7-fNq"/>
+                    <constraint firstItem="9yc-iY-cMP" firstAttribute="leading" secondItem="wfB-0S-7pz" secondAttribute="leading" id="RKJ-0l-Cyv"/>
+                    <constraint firstAttribute="trailing" secondItem="wfB-0S-7pz" secondAttribute="trailing" constant="16" id="WaR-yN-TQS"/>
+                    <constraint firstItem="Wry-bY-sCT" firstAttribute="top" secondItem="vNK-Zh-Tqk" secondAttribute="bottom" constant="16" id="aDJ-gr-yu6"/>
+                    <constraint firstItem="9yc-iY-cMP" firstAttribute="top" secondItem="wfB-0S-7pz" secondAttribute="bottom" constant="4" id="cqk-ZG-dls"/>
+                    <constraint firstItem="ILw-pj-SM5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fmL-qR-Tn1"/>
+                    <constraint firstItem="Wry-bY-sCT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="gGh-6v-a4k"/>
+                    <constraint firstItem="vNK-Zh-Tqk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="hFe-P0-xn9"/>
+                    <constraint firstItem="vNK-Zh-Tqk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="hwS-Zc-SXt"/>
+                    <constraint firstAttribute="trailing" secondItem="ILw-pj-SM5" secondAttribute="trailing" id="mrf-xj-pd0"/>
+                    <constraint firstItem="ILw-pj-SM5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="prA-Wc-QZW"/>
+                    <constraint firstAttribute="bottom" secondItem="Wry-bY-sCT" secondAttribute="bottom" constant="-0.5" id="wzv-TX-JRs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImgBtn" destination="vNK-Zh-Tqk" id="FJz-yD-v99"/>
+                <outlet property="bottomLine" destination="Wry-bY-sCT" id="SZP-ep-hxd"/>
+                <outlet property="bottomLineLeftConstrains" destination="gGh-6v-a4k" id="MFV-OV-nqY"/>
+                <outlet property="editLine" destination="9yc-iY-cMP" id="ayr-uh-q4s"/>
+                <outlet property="groupNameField" destination="wfB-0S-7pz" id="5fd-3s-AFM"/>
+            </connections>
+            <point key="canvasLocation" x="-319" y="-35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="select_group_avatar" width="67" height="67"/>
+    </resources>
+</document>

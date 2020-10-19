@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  COD
+
+  Created by xinhooo on 2019/4/12.
+  Copyright © 2019 XinHoo. All rights reserved.
+*/
+
+"safecode is invalid" = "验证码无效";
+"Too many errors, please get the verification code again" = "错误次数过多，请重新获取验证码";
+"Only three requests can be sent per day." = "每天只能向同一个人发送三次添加请求。";
+"You are already friends." = "你们已经是朋友了。";
+"It's wrong tel number" = "请输入正确的手机号码";
+"discover.reply" = "回复";
+
+"Wrong mobile phone number or password" = "手机号或密码错误";
+"Wrong user name or password" = "用户名或密码错误";
+
+

@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "添加电话号码"; ObjectID = "5AF-cP-Bsu"; */
+"5AF-cP-Bsu.normalTitle" = "添加电话号码";
+
+/* Class = "UILabel"; text = "描述"; ObjectID = "ATz-0h-0BE"; */
+"ATz-0h-0BE.text" = "描述";
+
+/* Class = "UILabel"; text = "设置用户备注"; ObjectID = "Ws8-M3-3JM"; */
+"Ws8-M3-3JM.text" = "設置用戶備注";
+
+/* Class = "UITextField"; placeholder = "设置用户备注"; ObjectID = "uFW-eL-zde"; */
+"uFW-eL-zde.placeholder" = "設置用戶備注";

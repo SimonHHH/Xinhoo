@@ -1,0 +1,6 @@
+
+/* Class = "UIButton"; normalTitle = "再次发送"; ObjectID = "KxT-mh-a59"; */
+"KxT-mh-a59.normalTitle" = "再次发送";
+
+/* Class = "UILabel"; text = "发送失败，轻触以再次发送"; ObjectID = "OlJ-yO-3tP"; */
+"OlJ-yO-3tP.text" = "发送失败，轻触以再次发送";

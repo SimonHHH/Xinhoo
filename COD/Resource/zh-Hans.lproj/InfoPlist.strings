@@ -1,0 +1,17 @@
+/* 
+  InfoPlist.strings
+  COD
+
+  Created by xinhooo on 2019/10/9.
+  Copyright © 2019 XinHoo. All rights reserved.
+*/
+{
+    "NSAppleMusicUsageDescription" = "星河IM访问您的媒体资料库，是否允许访问？";
+    "NSCameraUsageDescription" = "星河IM会在上传头像等服务中访问您的相机，是否允许访问？";
+    "NSContactsUsageDescription" = "将您的联系人上传到 星河IM 的服务器，以便您更方便的添加好友，并帮助我们提供更好的服务。";
+    "NSLocationWhenInUseUsageDescription" = "星河IM会在发送位置信息中使用您的定位，是否允许访问？";
+    "NSMicrophoneUsageDescription" = "星河IM会在录音等服务中访问您的麦克风功能，是否允许访问？";
+    "NSPhotoLibraryAddUsageDescription" = "星河IM会在上传头像等服务中访问您的相册功能，是否允许访问？";
+    "NSPhotoLibraryUsageDescription" = "星河IM会在上传头像等服务中访问您的相册功能，是否允许访问？";
+    "CFBundleDisplayName" = "星河IM";
+}

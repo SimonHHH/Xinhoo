@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XinhooTimeAndReadView" customModule="COD" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConst" destination="WZa-W1-xqA" id="lvh-2Z-oYG"/>
+                <outlet property="nikeNameLab" destination="ly0-LA-VYT" id="5Kb-9J-sxU"/>
+                <outlet property="statuImageView" destination="byj-S7-C4j" id="Oq1-XU-WRs"/>
+                <outlet property="timeLab" destination="n9J-Om-tOi" id="FxK-4C-MVv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="18"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="p3M-dY-qgZ">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="18"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9J-Om-tOi">
+                            <rect key="frame" x="217" y="0.0" width="0.0" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ly0-LA-VYT">
+                            <rect key="frame" x="4" y="0.0" width="212" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="readInfo_blue" translatesAutoresizingMaskIntoConstraints="NO" id="byj-S7-C4j">
+                            <rect key="frame" x="220" y="4" width="17" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="17" id="Whv-9k-ty7"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="fd_collapsibleConstraints" destination="Whv-9k-ty7" id="t7m-er-cco"/>
+                            </connections>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ly0-LA-VYT" firstAttribute="leading" secondItem="p3M-dY-qgZ" secondAttribute="leading" constant="4" id="0bk-ku-Hwn"/>
+                        <constraint firstItem="n9J-Om-tOi" firstAttribute="bottom" secondItem="ly0-LA-VYT" secondAttribute="bottom" id="2MS-1P-y7t"/>
+                        <constraint firstItem="n9J-Om-tOi" firstAttribute="top" secondItem="p3M-dY-qgZ" secondAttribute="top" id="JIR-rd-32i"/>
+                        <constraint firstAttribute="trailing" secondItem="byj-S7-C4j" secondAttribute="trailing" constant="3" id="UaD-Vt-t6a"/>
+                        <constraint firstAttribute="bottom" secondItem="n9J-Om-tOi" secondAttribute="bottom" id="WZa-W1-xqA"/>
+                        <constraint firstItem="ly0-LA-VYT" firstAttribute="top" secondItem="p3M-dY-qgZ" secondAttribute="top" id="Z5y-tW-q9g"/>
+                        <constraint firstItem="n9J-Om-tOi" firstAttribute="leading" secondItem="ly0-LA-VYT" secondAttribute="trailing" constant="1" id="bVL-vB-6rL"/>
+                        <constraint firstItem="byj-S7-C4j" firstAttribute="leading" secondItem="n9J-Om-tOi" secondAttribute="trailing" constant="3" id="e0S-Fh-aaB"/>
+                        <constraint firstAttribute="height" constant="18" id="kbS-QC-d9T"/>
+                        <constraint firstItem="byj-S7-C4j" firstAttribute="centerY" secondItem="n9J-Om-tOi" secondAttribute="centerY" id="q4f-IK-W4a"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="p3M-dY-qgZ" secondAttribute="bottom" id="Hq7-06-Wtg"/>
+                <constraint firstItem="p3M-dY-qgZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ibZ-Pz-Yhb"/>
+                <constraint firstItem="p3M-dY-qgZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mWO-Vj-0fo"/>
+                <constraint firstAttribute="trailing" secondItem="p3M-dY-qgZ" secondAttribute="trailing" id="twD-8B-JPL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-145.59999999999999" y="-295.05247376311848"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="readInfo_blue" width="17" height="10"/>
+    </resources>
+</document>

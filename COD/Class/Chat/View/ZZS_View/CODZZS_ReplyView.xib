@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CODZZS_ReplyView" customModule="COD" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUB-7y-RIs">
+                    <rect key="frame" x="0.0" y="0.0" width="2" height="102"/>
+                    <color key="backgroundColor" red="0.38823529411764707" green="0.78823529411764703" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="2" id="0wA-IF-gjZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-0d-nqD" customClass="FLAnimatedImageView">
+                    <rect key="frame" x="8" y="0.0" width="102" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Pyb-0d-nqD" secondAttribute="height" id="Wgy-Uz-Ya0"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSF-Lm-Y0B" customClass="YYLabel">
+                    <rect key="frame" x="2" y="-2" width="275" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize_">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetTop_">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetBottom_">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineBreakMode">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMu-1F-xnR" customClass="YYLabel">
+                    <rect key="frame" x="2" y="104" width="275" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize_">
+                            <real key="value" value="14"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetTop_">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetBottom_">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="lineBreakMode">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gMu-1F-xnR" firstAttribute="bottom" secondItem="Pyb-0d-nqD" secondAttribute="bottom" constant="2" id="3q9-nn-SkX"/>
+                <constraint firstItem="cUB-7y-RIs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="53L-G2-XB1"/>
+                <constraint firstItem="Pyb-0d-nqD" firstAttribute="leading" secondItem="cUB-7y-RIs" secondAttribute="trailing" constant="6" id="6sh-f7-BBJ"/>
+                <constraint firstItem="cUB-7y-RIs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BTq-BT-fha"/>
+                <constraint firstItem="Pyb-0d-nqD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="J7T-Dj-3R5"/>
+                <constraint firstItem="gMu-1F-xnR" firstAttribute="leading" secondItem="qSF-Lm-Y0B" secondAttribute="leading" id="OVv-cs-Z75"/>
+                <constraint firstItem="qSF-Lm-Y0B" firstAttribute="top" secondItem="Pyb-0d-nqD" secondAttribute="top" constant="-2" id="Orc-0e-JwT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Pyb-0d-nqD" secondAttribute="bottom" id="Z6N-G8-vGF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gMu-1F-xnR" secondAttribute="trailing" id="g2I-sL-VsU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cUB-7y-RIs" secondAttribute="bottom" id="q2o-pL-T0l"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qSF-Lm-Y0B" secondAttribute="trailing" id="tHf-61-aJb"/>
+                <constraint firstItem="qSF-Lm-Y0B" firstAttribute="leading" secondItem="cUB-7y-RIs" secondAttribute="trailing" id="x1u-gu-efW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="rpContentBottomCos" destination="3q9-nn-SkX" id="fyH-Sm-sq7"/>
+                <outlet property="rpContentLab" destination="gMu-1F-xnR" id="Elw-tq-Nmk"/>
+                <outlet property="rpImageView" destination="Pyb-0d-nqD" id="ehs-lp-c4n"/>
+                <outlet property="rpLeadingCos" destination="x1u-gu-efW" id="Yph-SD-XZ4"/>
+                <outlet property="rpLineView" destination="cUB-7y-RIs" id="Rmo-z2-A0N"/>
+                <outlet property="rpNameLab" destination="qSF-Lm-Y0B" id="RxQ-Hj-3NZ"/>
+            </connections>
+            <point key="canvasLocation" x="-278.98550724637681" y="105.97826086956522"/>
+        </view>
+    </objects>
+</document>

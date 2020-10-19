@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CODDiscoverSendFailView" customModule="COD" customModuleProvider="target">
+            <connections>
+                <outlet property="sendBtn" destination="KxT-mh-a59" id="rta-gg-LvB"/>
+                <outlet property="textLab" destination="OlJ-yO-3tP" id="ZeL-O5-8i3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKC-KZ-7ki">
+                    <rect key="frame" x="0.0" y="0.0" width="432" height="45"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_detail_failure" translatesAutoresizingMaskIntoConstraints="NO" id="qSl-MQ-j9S">
+                            <rect key="frame" x="17" y="9.5" width="26" height="26"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发送失败，轻触以再次发送" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlJ-yO-3tP">
+                            <rect key="frame" x="60" y="14" width="171.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.66274509803921566" green="0.58431372549019611" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxT-mh-a59">
+                            <rect key="frame" x="371" y="12.5" width="51" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <inset key="contentEdgeInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                            <state key="normal" title="再次发送">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onClickSendMessage:" destination="-1" eventType="touchUpInside" id="geZ-Z4-sQN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.8666666666666667" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="KxT-mh-a59" firstAttribute="centerY" secondItem="DKC-KZ-7ki" secondAttribute="centerY" id="6vg-Nf-lpF"/>
+                        <constraint firstItem="KxT-mh-a59" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OlJ-yO-3tP" secondAttribute="trailing" constant="10" id="9iT-HF-ej8"/>
+                        <constraint firstAttribute="height" constant="45" id="Eg0-Ha-kva"/>
+                        <constraint firstItem="qSl-MQ-j9S" firstAttribute="centerY" secondItem="DKC-KZ-7ki" secondAttribute="centerY" id="LpC-cR-dsn"/>
+                        <constraint firstItem="OlJ-yO-3tP" firstAttribute="centerY" secondItem="DKC-KZ-7ki" secondAttribute="centerY" id="dAX-1W-blO"/>
+                        <constraint firstAttribute="trailing" secondItem="KxT-mh-a59" secondAttribute="trailing" constant="10" id="eIr-t3-R3I"/>
+                        <constraint firstItem="KxT-mh-a59" firstAttribute="centerY" secondItem="DKC-KZ-7ki" secondAttribute="centerY" id="muf-Yp-7Dw"/>
+                        <constraint firstItem="qSl-MQ-j9S" firstAttribute="leading" secondItem="DKC-KZ-7ki" secondAttribute="leading" constant="17" id="qB2-MR-jAA"/>
+                        <constraint firstItem="OlJ-yO-3tP" firstAttribute="leading" secondItem="qSl-MQ-j9S" secondAttribute="trailing" constant="17" id="shR-R9-XH0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DKC-KZ-7ki" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AoR-fU-xUy"/>
+                <constraint firstItem="DKC-KZ-7ki" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KYQ-ci-2ib"/>
+                <constraint firstAttribute="trailing" secondItem="DKC-KZ-7ki" secondAttribute="trailing" id="bgS-qo-Ucn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1" y="-294.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle_detail_failure" width="26" height="26"/>
+    </resources>
+</document>

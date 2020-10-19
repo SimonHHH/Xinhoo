@@ -1,0 +1,177 @@
+PODS:
+  - ActiveLabel (1.0.1)
+  - Alamofire (4.8.1)
+  - BaiduMapKit (4.3.0)
+  - BMKLocationKit (1.5.0)
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaLumberjack (3.5.2):
+    - CocoaLumberjack/Core (= 3.5.2)
+  - CocoaLumberjack/Core (3.5.2)
+  - CocoaLumberjack/Swift (3.5.2):
+    - CocoaLumberjack/Core
+  - CYLTabBarController (1.24.1):
+    - CYLTabBarController/Core (= 1.24.1)
+  - CYLTabBarController/Core (1.24.1)
+  - EmptyDataSet-Swift (4.2.0)
+  - GoogleWebRTC (1.1.28117)
+  - HandyJSON (5.0.0-beta.1)
+  - IQKeyboardManagerSwift (6.2.0)
+  - KeyboardMan (1.2.3)
+  - KissXML (5.2.3)
+  - libidn (1.35)
+  - LPActionSheet (1.0)
+  - MBProgressHUD (1.1.0)
+  - pop (1.0.12)
+  - PopupKit (3.1.1)
+  - RDVTabBarControllerSwift (0.1.2)
+  - ReactiveCocoa (9.0.0):
+    - ReactiveSwift (~> 5.0)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - Result (4.1.0)
+  - SDWebImage (5.0.0-beta6):
+    - SDWebImage/Core (= 5.0.0-beta6)
+  - SDWebImage/Core (5.0.0-beta6)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
+  - SwifterSwift (4.6.0):
+    - SwifterSwift/AppKit (= 4.6.0)
+    - SwifterSwift/CoreGraphics (= 4.6.0)
+    - SwifterSwift/CoreLocation (= 4.6.0)
+    - SwifterSwift/Foundation (= 4.6.0)
+    - SwifterSwift/MapKit (= 4.6.0)
+    - SwifterSwift/SpriteKit (= 4.6.0)
+    - SwifterSwift/SwiftStdlib (= 4.6.0)
+    - SwifterSwift/UIKit (= 4.6.0)
+  - SwifterSwift/AppKit (4.6.0)
+  - SwifterSwift/CoreGraphics (4.6.0)
+  - SwifterSwift/CoreLocation (4.6.0)
+  - SwifterSwift/Foundation (4.6.0)
+  - SwifterSwift/MapKit (4.6.0)
+  - SwifterSwift/SpriteKit (4.6.0)
+  - SwifterSwift/SwiftStdlib (4.6.0)
+  - SwifterSwift/UIKit (4.6.0)
+  - SwiftyJSON (4.2.0)
+  - SwipeCellKit (2.5.4)
+  - TZImagePickerController (3.1.9)
+  - UINavigation-SXFixSpace-Swift (1.2.1)
+  - XMPPFramework/default (4.0.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - CocoaLumberjack
+    - KissXML (~> 5.2)
+    - libidn (~> 1.35)
+  - XMPPFramework/Swift (4.0.0):
+    - CocoaLumberjack/Swift
+    - XMPPFramework/default
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - ActiveLabel (~> 1.0.1)
+  - Alamofire (~> 4.8.1)
+  - BaiduMapKit
+  - BMKLocationKit
+  - CYLTabBarController (~> 1.24.1)
+  - EmptyDataSet-Swift (~> 4.2.0)
+  - GoogleWebRTC
+  - HandyJSON (~> 5.0.0-beta.1)
+  - IQKeyboardManagerSwift (~> 6.2.0)
+  - KeyboardMan (~> 1.2.3)
+  - LPActionSheet (~> 1.0)
+  - MBProgressHUD
+  - pop (~> 1.0.12)
+  - PopupKit (~> 3.1.1)
+  - RDVTabBarControllerSwift (~> 0.1.2)
+  - ReactiveCocoa (~> 9.0.0)
+  - RealmSwift (~> 3.13.1)
+  - SDWebImage (~> 5.0.0-beta5)
+  - SnapKit (~> 4.2.0)
+  - SVProgressHUD (~> 2.2.5)
+  - SwifterSwift (~> 4.6.0)
+  - SwiftyJSON (~> 4.2.0)
+  - SwipeCellKit (~> 2.5.1)
+  - TZImagePickerController (~> 3.1.5)
+  - UINavigation-SXFixSpace-Swift (~> 1.2.1)
+  - XMPPFramework/Swift
+  - YYText (~> 1.0.7)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActiveLabel
+    - Alamofire
+    - BaiduMapKit
+    - BMKLocationKit
+    - CocoaAsyncSocket
+    - CocoaLumberjack
+    - CYLTabBarController
+    - EmptyDataSet-Swift
+    - GoogleWebRTC
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - KeyboardMan
+    - KissXML
+    - libidn
+    - LPActionSheet
+    - MBProgressHUD
+    - pop
+    - PopupKit
+    - RDVTabBarControllerSwift
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Realm
+    - RealmSwift
+    - Result
+    - SDWebImage
+    - SnapKit
+    - SVProgressHUD
+    - SwifterSwift
+    - SwiftyJSON
+    - SwipeCellKit
+    - TZImagePickerController
+    - UINavigation-SXFixSpace-Swift
+    - XMPPFramework
+    - YYText
+
+SPEC CHECKSUMS:
+  ActiveLabel: b8b2396fe25308d563601437d6605bf691c3b5db
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BaiduMapKit: 63575d9236b4112c4ff76391df637f2a6dc1ada8
+  BMKLocationKit: 40d267478acd8704ddebd0e9deaddc727b13df9f
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
+  CYLTabBarController: 46fa053a2fb165095e04792431ad91a759bb7f9f
+  EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  GoogleWebRTC: 44cdafc5140ba1e63e6944ed22cadbe269f28f88
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  KeyboardMan: b51e3209d41ff56f65459c9cf734a5f8c5443783
+  KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
+  libidn: e4576a956b797c584c77aaedfc6e3dd639b61bdc
+  LPActionSheet: 49fb9201e73f24f41adeb2a76773307d37ab0416
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  PopupKit: e362ed92148d831a9c38a2bc7a25893e46d64c54
+  RDVTabBarControllerSwift: bab61ec3f303119cf5b499938d373179ee182407
+  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: 2840a50a41156efccf460df67218b32029177897
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
+  TZImagePickerController: c3f7c505d23281e21e98df6dbeae372946caa28f
+  UINavigation-SXFixSpace-Swift: 648140526154fdbfdcc6f55a6ac030b1f603a176
+  XMPPFramework: 5d31ff9f73dce031b24bc49bcf88093627a3a86e
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: c13ed53874511686606987cec65416cf659ffab4
+
+COCOAPODS: 1.7.1
